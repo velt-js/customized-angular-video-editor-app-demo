@@ -1,0 +1,176 @@
+<velt-wireframe style="display:none;">
+
+	<velt-comment-dialog-wireframe>
+		<!-- Ghost Banner -->
+		<velt-comment-dialog-ghost-banner-wireframe></velt-comment-dialog-ghost-banner-wireframe>
+		<!-- Private Banner -->
+		<velt-comment-dialog-private-banner-wireframe></velt-comment-dialog-private-banner-wireframe>
+		<!-- Assignee Banner -->
+		<velt-comment-dialog-assignee-banner-wireframe></velt-comment-dialog-assignee-banner-wireframe>
+		<!-- Header -->
+		<velt-comment-dialog-header-wireframe></velt-comment-dialog-header-wireframe>
+		<!-- Private Badge -->
+		<velt-comment-dialog-private-badge-wireframe></velt-comment-dialog-private-badge-wireframe>
+		<!-- Body -->
+		<velt-comment-dialog-body-wireframe></velt-comment-dialog-body-wireframe>
+		<!-- Composer -->
+		<velt-comment-dialog-composer-wireframe></velt-comment-dialog-composer-wireframe>
+		<!-- All Comments -->
+		<velt-comment-dialog-all-comment-wireframe></velt-comment-dialog-all-comment-wireframe>
+		<!-- Approve -->
+		<velt-comment-dialog-approve-wireframe></velt-comment-dialog-approve-wireframe>
+		<!-- Sign In -->
+		<velt-comment-dialog-sign-in-wireframe></velt-comment-dialog-sign-in-wireframe>
+		<!-- Upgrade -->
+		<velt-comment-dialog-upgrade-wireframe></velt-comment-dialog-upgrade-wireframe>
+		<!-- Suggestion Action -->
+		<velt-comment-dialog-suggestion-action-wireframe></velt-comment-dialog-suggestion-action-wireframe>
+	</velt-comment-dialog-wireframe>
+
+	<velt-comment-dialog-composer-wireframe>
+		<velt-comment-dialog-composer-private-badge-wireframe></velt-comment-dialog-composer-private-badge-wireframe>
+		<!-- Used for inline comments-->
+
+		<velt-comment-dialog-composer-input-wireframe></velt-comment-dialog-composer-input-wireframe>
+
+		<velt-comment-dialog-composer-attachments-wireframe>
+		</velt-comment-dialog-composer-attachments-wireframe>
+
+		<velt-comment-dialog-composer-recordings-wireframe></velt-comment-dialog-composer-recordings-wireframe>
+
+		<div class="attachments">
+			<div class="all-options">
+				<button class="play-pause"
+					onclick="let v = document.querySelector('#vid'); if (v.paused) { v.play(); this.querySelector('.play').style.display = 'none'; this.querySelector('.pause').style.display = 'inline'; } else { v.pause(); this.querySelector('.play').style.display = 'inline'; this.querySelector('.pause').style.display = 'none'; }">
+					<svg class="play" width="12" height="12" viewBox="0 0 12 12" fill="none"
+						xmlns="http://www.w3.org/2000/svg" style="display: inline;">
+						<g clip-path="url(#clip0_11865_17610)">
+							<path d="M3.5 1.66987L11 6L3.5 10.3301L3.5 1.66987Z" stroke="#FFCD2E" />
+						</g>
+						<defs>
+							<clipPath id="clip0_11865_17610">
+								<rect width="12" height="12" fill="white" />
+							</clipPath>
+						</defs>
+					</svg>
+
+					<svg class="pause" width="12" height="12" viewBox="0 0 12 12" fill="none"
+						xmlns="http://www.w3.org/2000/svg" style="display: none;">
+						<rect x="2.5" y="1.5" width="2.33333" height="9" rx="1.16667" fill="#FFCD2E" />
+						<rect x="7.1665" y="1.5" width="2.33333" height="9" rx="1.16667" fill="#FFCD2E" />
+					</svg>
+
+					<velt-data path="commentAnnotation.location.locationName"></velt-data>
+				</button>
+
+				<div class="option-button">
+					<button class="plus-button">
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M10.0003 4.16748V15.8341M4.16699 10.0008H15.8337" stroke="#858585"
+								stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+
+					</button>
+					<span class="options">
+						<velt-comment-dialog-composer-action-button-wireframe style="animation-delay: 0; display: none;"
+							type="userMentions"></velt-comment-dialog-composer-action-button-wireframe>
+						<velt-comment-dialog-composer-action-button-wireframe style="animation-delay: 40ms"
+							type="attachments"></velt-comment-dialog-composer-action-button-wireframe>
+						<velt-comment-dialog-composer-action-button-wireframe style="animation-delay: 80ms"
+							type="audio"></velt-comment-dialog-composer-action-button-wireframe>
+						<velt-comment-dialog-composer-action-button-wireframe style="animation-delay: 120ms"
+							type="video"></velt-comment-dialog-composer-action-button-wireframe>
+						<velt-comment-dialog-composer-action-button-wireframe style="animation-delay: 160ms"
+							type="screen"></velt-comment-dialog-composer-action-button-wireframe>
+					</span>
+				</div>
+			</div>
+
+			<span class="right">
+				<velt-comment-dialog-custom-annotation-dropdown-wireframe>
+					<velt-comment-dialog-custom-annotation-dropdown-trigger-wireframe>
+						<velt-comment-dialog-custom-annotation-dropdown-trigger-list-wireframe>
+							<velt-comment-dialog-custom-annotation-dropdown-trigger-list-item-wireframe></velt-comment-dialog-custom-annotation-dropdown-trigger-list-item-wireframe>
+						</velt-comment-dialog-custom-annotation-dropdown-trigger-list-wireframe>
+						<velt-comment-dialog-custom-annotation-dropdown-trigger-remaining-count-wireframe></velt-comment-dialog-custom-annotation-dropdown-trigger-remaining-count-wireframe>
+						<velt-comment-dialog-custom-annotation-dropdown-trigger-arrow-wireframe></velt-comment-dialog-custom-annotation-dropdown-trigger-arrow-wireframe>
+					</velt-comment-dialog-custom-annotation-dropdown-trigger-wireframe>
+					<velt-comment-dialog-custom-annotation-dropdown-content-wireframe>
+						<velt-comment-dialog-custom-annotation-dropdown-content-item-wireframe>
+							<velt-comment-dialog-custom-annotation-dropdown-content-item-label-wireframe></velt-comment-dialog-custom-annotation-dropdown-content-item-label-wireframe>
+							<velt-comment-dialog-custom-annotation-dropdown-content-item-icon-wireframe></velt-comment-dialog-custom-annotation-dropdown-content-item-icon-wireframe>
+						</velt-comment-dialog-custom-annotation-dropdown-content-item-wireframe>
+					</velt-comment-dialog-custom-annotation-dropdown-content-wireframe>
+				</velt-comment-dialog-custom-annotation-dropdown-wireframe>
+
+				<velt-comment-dialog-composer-action-button-wireframe type="submit">
+					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M14 7.99998L3.13195 2.68931C3.06992 2.66547 3.0022 2.6606 2.93739 2.67532C2.87258 2.69004 2.8136 2.72368 2.76795 2.77198C2.72096 2.82156 2.68861 2.88318 2.67449 2.95002C2.66037 3.01686 2.66503 3.0863 2.68795 3.15065L4.33329 7.99998M14 7.99998L3.13195 13.3106C3.06992 13.3345 3.0022 13.3394 2.93739 13.3246C2.87258 13.3099 2.8136 13.2763 2.76795 13.228C2.72096 13.1784 2.68861 13.1168 2.67449 13.0499C2.66037 12.9831 2.66503 12.9137 2.68795 12.8493L4.33329 7.99998M14 7.99998H4.33329"
+							stroke="#858585" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</velt-comment-dialog-composer-action-button-wireframe>
+			</span>
+
+
+		</div>
+
+		<velt-comment-dialog-composer-assign-user-wireframe></velt-comment-dialog-composer-assign-user-wireframe>
+
+	</velt-comment-dialog-composer-wireframe>
+
+
+	<velt-comment-dialog-header-wireframe>
+		<!-- Following subcomponents can be used outside header as well -->
+		<!-- Pin Dialog Header -->
+
+		<div class="header-container">
+			<span class="comment-navigation">
+				<button onclick="ng.getComponent(document.querySelector('app-document')).getPreviousComment()">
+					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M10.0005 4.00146L6.00049 8.00146L10.0005 12.0015" stroke="#999999" stroke-width="1.33333"
+							stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+
+
+				</button>
+
+				<button onclick="ng.getComponent(document.querySelector('app-document')).getNextComment()">
+				<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M6.00049 4.00146L10.0005 8.00146L6.00049 12.0015" stroke="#999999" stroke-width="1.33333"
+						stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+
+				</button>
+			</span>
+			
+			<span>
+				<velt-comment-dialog-resolve-button-wireframe>
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+						<g clip-path="url(#clip0_11935_13131)">
+							<path
+								d="M14.6667 1.91584C16.0747 2.7288 17.246 3.89538 18.0645 5.3001C18.8831 6.70483 19.3206 8.29898 19.3338 9.92476C19.3469 11.5505 18.9352 13.1515 18.1394 14.5693C17.3436 15.9871 16.1914 17.1724 14.7967 18.008C13.4021 18.8436 11.8133 19.3005 10.1878 19.3334C8.56235 19.3663 6.95644 18.9741 5.52911 18.1956C4.10177 17.4171 2.9025 16.2793 2.05002 14.8949C1.19753 13.5105 0.721389 11.9275 0.66873 10.3025L0.664062 10.0001L0.66873 9.6976C0.72101 8.08541 1.19014 6.51429 2.03039 5.13739C2.87063 3.76049 4.05332 2.6248 5.46314 1.84105C6.87297 1.05731 8.46182 0.65224 10.0748 0.665347C11.6878 0.678455 13.2698 1.10929 14.6667 1.91584ZM13.4597 7.47304C13.299 7.31231 13.0851 7.21576 12.8582 7.20149C12.6314 7.18723 12.4071 7.25623 12.2275 7.39556L12.1397 7.47304L9.06567 10.5462L7.85864 9.34006L7.77089 9.26258C7.59126 9.12335 7.36702 9.05443 7.14021 9.06874C6.9134 9.08305 6.69959 9.17961 6.5389 9.34031C6.3782 9.50101 6.28164 9.71481 6.26733 9.94162C6.25302 10.1684 6.32194 10.3927 6.46117 10.5723L6.53865 10.66L8.40567 12.5271L8.49342 12.6046C8.65714 12.7316 8.85846 12.8005 9.06567 12.8005C9.27288 12.8005 9.4742 12.7316 9.63791 12.6046L9.72566 12.5271L13.4597 8.79302L13.5372 8.70527C13.6765 8.52566 13.7455 8.30138 13.7313 8.07452C13.717 7.84765 13.6204 7.63378 13.4597 7.47304Z" />
+						</g>
+						<defs>
+							<clipPath id="clip0_11935_13131">
+								<rect width="20" height="20" fill="white" />
+							</clipPath>
+						</defs>
+					</svg>
+				</velt-comment-dialog-resolve-button-wireframe>
+				<velt-comment-dialog-unresolve-button-wireframe></velt-comment-dialog-unresolve-button-wireframe>
+				<velt-comment-dialog-options-wireframe></velt-comment-dialog-options-wireframe>
+			</span>
+		</div>
+
+		<!-- Sidebar Dialog Header -->
+		<velt-comment-dialog-comment-category-wireframe></velt-comment-dialog-comment-category-wireframe>
+		<velt-comment-dialog-comment-suggestion-status-wireframe></velt-comment-dialog-comment-suggestion-status-wireframe>
+		<!-- Delete Button. Not added to the default components. You can explicitly add it. -->
+	</velt-comment-dialog-header-wireframe>
+
+	<velt-comment-dialog-toggle-reply-wireframe>
+		<velt-data path="commentAnnotation.comments.length"></velt-data> Replies
+	</velt-comment-dialog-toggle-reply-wireframe>
+
+</velt-wireframe>

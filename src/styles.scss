@@ -1,0 +1,285 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+	background-color: black;
+}
+
+velt-video-player>div>div>.s-video-control-panel__controls {
+	padding-bottom: 0px !important;
+	padding-top: 0px !important;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+// Variables
+:root {
+	color-scheme: light dark;
+
+	--dark-bg-0: rgba(255, 255, 255, 0.06);
+	--dark-bg-1: rgba(255, 255, 255, 0.08);
+	--dark-text-0: rgba(255, 255, 255, 0.44);
+	--dark-text-1: rgba(255, 255, 255, 0.8);
+
+	--light-bg-0: rgba(0, 0, 0, 0.02);
+	--light-bg-1: rgba(0, 0, 0, 0.04);
+	--light-text-0: rgba(0, 0, 0, 0.44);
+	--light-text-1: rgba(0, 0, 0, 0.8);
+
+}
+
+// Global styles
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	transition: background-color 150ms ease-in-out;
+}
+
+body {
+	background-color: light-dark(white, black);
+	color: light-dark(black, white);
+	font-family: Urbanist, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+button {
+	display: inline-flex;
+}
+
+.main {
+	width: 100%;
+	height: 100vh;
+}
+
+// VELT CUSTOMIZATION: Updating Velt Classes
+
+velt-notifications-tool {
+	div div app-notifications-tool-label {
+		display: none;
+	}
+}
+
+
+.velt-comment-dialog {
+	background: light-dark(#FFFFFF, #0F0F0F) !important;
+	border: 1px solid light-dark(#FAFAFA, #1A1A1A) !important;
+	padding: 0 !important;
+
+	app-comment-dialog-composer {
+		&>div {
+			margin: 1rem !important;
+			margin-top: 0 !important;
+			border: 1px solid light-dark(var(--light-bg-0), var(--dark-bg-0));
+			border-radius: 1rem;
+		}
+	}
+
+	.velt-composer-open,
+	.velt-composer-input-focused {
+		margin: 1rem !important;
+		margin-top: 0 !important;
+		border: 1px solid light-dark(var(--light-bg-0), var(--dark-bg-0));
+		border-radius: 1rem;
+	}
+
+	velt-comment-dialog-wireframe {
+		velt-comment-dialog-composer-wireframe {
+			div[contenteditable] {
+				padding: 1rem !important;
+			}
+
+			.velt-composer--attachments {
+				padding: 1rem !important;
+			}
+
+			.velt-recorder-player-audio-container,
+			.velt-recorder-player-video-container {
+				padding: 1rem !important;
+				padding-bottom: 0 !important;
+			}
+
+			.attachments {
+				display: inline-flex;
+				width: 100%;
+				justify-content: space-between;
+				align-items: center;
+				padding: 2px 0.5rem 0.5rem 0.5rem !important;
+
+				button {
+					border: none;
+					outline: none;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 36px;
+					height: 36px;
+					background-color: transparent;
+					cursor: pointer;
+				}
+
+				.all-options {
+					display: inline-flex;
+					justify-content: space-between;
+					align-items: center;
+					gap: 8px;
+
+					button.play-pause {
+						display: inline-flex;
+						gap: 8px;
+						width: fit-content;
+						padding: 0.5rem 1rem 0.5rem 0.75rem;
+						border-radius: 1.5rem;
+						background-color: light-dark(var(--light-bg-0), var(--dark-bg-0));
+					}
+
+
+					.option-button {
+						display: inline-flex;
+						background-color: light-dark(var(--light-bg-0), var(--dark-bg-0));
+						border-radius: 1.5rem;
+
+
+						&:hover>.plus-button>svg {
+							transform: rotate(-45deg);
+							opacity: 0.5;
+
+						}
+
+						button.plus-button {
+							&:hover~span.options {
+
+								opacity: 1;
+
+							}
+						}
+
+						.options {
+							gap: 4px;
+							opacity: 0;
+							padding: 4px;
+							max-height: 36px;
+							display: none;
+							align-items: center;
+						}
+
+						&:hover>.options {
+							display: flex;
+							opacity: 1;
+						}
+					}
+
+
+					span {
+						display: inline-flex;
+						gap: 4px;
+					}
+				}
+
+				span.right {
+					button {}
+				}
+			}
+		}
+	}
+
+	velt-comment-dialog-header-wireframe {
+		.header-container {
+			width: 100%;
+			display: inline-flex;
+			justify-content: space-between;
+			padding: 1rem;
+
+			.comment-navigation {
+				display: inline-flex;
+				gap: 8px;
+
+				button {
+					background-color: transparent;
+					border: 1px solid light-dark(var(--light-bg-0), var(--dark-bg-0));
+					border-radius: 1rem;
+					display: inline-flex;
+					justify-content: center;
+					align-items: center;
+					padding: 0.5rem;
+					cursor: pointer;
+				}
+			}
+
+			span {
+				display: inline-flex;
+				justify-content: space-between;
+
+				velt-comment-dialog-resolve-button-wireframe {
+					display: inline-flex;
+				}
+			}
+
+			span:last-child {
+				gap: 2px;
+			}
+		}
+	}
+
+	.velt-thread-card--container {
+		padding: 1rem !important;
+	}
+
+
+}
+
+.velt-comment-dialog.velt-comment-dialog--no-comments {
+
+	.velt-composer-open,
+	.velt-composer-input-focused {
+		margin: 0rem !important;
+	}
+
+	velt-comment-dialog-composer-wireframe {
+		.attachments {
+			.play-pause {
+					display: none !important;
+				}
+		}
+	}
+}
+
+velt-comment-dialog-resolve-button-wireframe {
+	display: flex;
+
+	svg {
+		fill: light-dark(#cccccc, #424242);
+	}
+}
+
+velt-comment-dialog-toggle-reply-wireframe {
+	margin-left: 2.7rem;
+	font-size: 12px !important;
+	opacity: 0.5;
+}
+
+.velt-composer--submit-button {
+	padding: 0.5rem !important;
+	border-radius: 0.5rem !important;
+
+	&:disabled {
+		// background-color: light-dark(#FFFFFF, #0F0F0F) !important;
+		background-color: transparent !important;
+	}
+
+	&:not(:disabled) {
+		background-color: #2F6EEB !important;
+		position: relative;
+
+		svg {
+			path {
+				stroke: #fff;
+			}
+		}
+	}
+
+	&:not(:disabled):hover {
+		background-color: darken(#2F6EEB, 8%) !important;
+	}
+
+	velt-comment-dialog-composer-action-button-wireframe {
+		display: flex;
+	}
+}
