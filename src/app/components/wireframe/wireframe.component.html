@@ -126,7 +126,7 @@
 
 		<div class="header-container">
 			<span class="comment-navigation">
-				<button onclick="ng.getComponent(document.querySelector('app-document')).getPreviousComment()">
+				<button onclick="globalThis.getPreviousComment()">
 					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M10.0005 4.00146L6.00049 8.00146L10.0005 12.0015" stroke="#999999" stroke-width="1.33333"
 							stroke-linecap="round" stroke-linejoin="round" />
@@ -135,7 +135,7 @@
 
 				</button>
 
-				<button onclick="ng.getComponent(document.querySelector('app-document')).getNextComment()">
+				<button onclick="globalThis.getNextComment()">
 				<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M6.00049 4.00146L10.0005 8.00146L6.00049 12.0015" stroke="#999999" stroke-width="1.33333"
 						stroke-linecap="round" stroke-linejoin="round" />
