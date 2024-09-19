@@ -79,6 +79,9 @@ export class DocumentComponent implements AfterViewInit {
 				})
 			}
 		});
+
+		(globalThis as any).getPreviousComment = this.getPreviousComment;
+		(globalThis as any).getNextComment = this.getNextComment;	
 	}
 
 	/**
@@ -195,6 +198,7 @@ export class DocumentComponent implements AfterViewInit {
 
 	getNextComment = () => {
 		console.log("currentTimestamp", this.videoPlayer.nativeElement.currentTime);
+		
 		const allComments = document.querySelectorAll('.video-comment-user-profile-container:not(.video-reaction-container)');
 		let index = Number(localStorage.getItem('selectedAnnotationIndex')) || 0;
 
